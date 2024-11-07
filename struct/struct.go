@@ -9,7 +9,10 @@ type laptop struct {
 	manufacturer string
 }
 
-func (l laptop) upgradeStorage(size int) {
+func (l laptop) upgradeStorageByValue(size int) {
+	l.storage += size
+}
+func (l *laptop) upgradeStorageByRef(size int) {
 	l.storage += size
 }
 func main() {
@@ -17,6 +20,6 @@ func main() {
 
 	fmt.Println(mba)
 
-	mba.upgradeStorage(100)
+	mba.upgradeStorageByValue(100)
 	fmt.Println(mba)
 }
