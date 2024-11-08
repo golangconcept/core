@@ -19,3 +19,15 @@ This system allows developers to define project dependencies in a go.mod file an
 - `go mod tidy`: Cleans up any unnecessary dependencies and adds missing ones.
 - `go get <package>`: Adds or updates a dependency.
 - `go list -m all`: Lists all the modules required by the current project.
+
+### Summary of the Most Common go mod Commands:
+| Command |	Description   |
+|---------|---------------|
+|`go mod init <module-name>`	| Initialize a new Go module with the specified module name.|
+|`go mod tidy` | Clean up go.mod and go.sum by removing unused dependencies.|
+|`go mod vendor` |	Creates a vendor/ directory containing dependencies.|
+|`go mod verify` | Verifies that dependencies in go.mod match what's on the disk.|
+|`go mod edit` | Modify go.mod file (add/remove dependencies, change Go version, etc.)|
+|`go mod graph` |	Prints a dependency graph of the module.|
+|`go mod download` | Downloads modules into the local cache.|
+|`go mod why` |	Explains why a module is included in the current module's dependency graph.|
