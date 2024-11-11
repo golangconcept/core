@@ -25,3 +25,14 @@ Note: In computer programming, `monkey patching` is a technique used to dynamica
 - The variable j has type int32, because of the explicit conversion. Even though i and j have the same memory layout, they have different types: the assignment i = j is a type error and must be written with an explicit conversion: i = int(j).
 
 - The variable f has type float, which the current implementations represent as a 32-bit floating-point value. It has the same memory footprint as the int32 but a different internal layout.
+
+#### If you need to compare types you defined, you shouldn't use `reflect.TypeOf(xxx)`. Instead, use `reflect.TypeOf(xxx).Kind()`.
+
+**There are two categories of types:**
+
+- direct types (the types you defined directly)
+- basic types (`int`, `float64`, `struct`, ...)
+
+> Here's the conclusion. 
+
+If you need to compare with basic types, use `reflect.TypeOf(xxx)`.Kind(); and if you need to compare with self-defined types, use `reflect.TypeOf(xxx)`.
