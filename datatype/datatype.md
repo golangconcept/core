@@ -13,3 +13,5 @@ The following are the basic data types available in Go
 - string
 
 There are also `byte` and `rune`. They are equivalent to `uint8` and `int32`, respectively.
+
+Note: In computer programming, `monkey patching` is a technique used to dynamically update the behavior of a piece of code at run-time. `It is used to extend or modify the runtime code of dynamic languages` such as `Smalltalk`, JavaScript, `Objective-C`, `Ruby`, `Perl`, `Python`, `Groovy`, and `Lisp` without altering the original source code.
