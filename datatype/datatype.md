@@ -33,6 +33,23 @@ Note: In computer programming, `monkey patching` is a technique used to dynamica
 - direct types (the types you defined directly)
 - basic types (`int`, `float64`, `struct`, ...)
 
-> Here's the conclusion. 
+> Here's the conclusion.
 
 If you need to compare with basic types, use `reflect.TypeOf(xxx)`.Kind(); and if you need to compare with self-defined types, use `reflect.TypeOf(xxx)`.
+
+````go
+package main
+
+import (
+	"fmt"
+	"reflect"
+	"unsafe"
+)
+
+func main() {
+	j := 3.4
+	k := j
+	l := int32(4)
+	fmt.Println(j, k, l, unsafe.Sizeof(l), reflect.TypeOf(l), reflect.TypeOf(l).Kind())
+}
+````
