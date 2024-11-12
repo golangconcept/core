@@ -58,3 +58,51 @@ func mergeSort(arr []int) []int {
 	return merge(left, right)
 }
 ```
+
+## Complete Example Walkthrough:
+
+**Given the two sorted slices:**
+
+- left = [2, 5, 8]
+- right = [1, 3, 7, 9]
+
+### The process proceeds as follows:
+
+- First Iteration:
+
+  - Compare 2 and 1 → 1 is smaller, so append 1.
+  - result = [1]
+  - Increment j (now j = 1).
+
+- Second Iteration:
+
+  - Compare 2 and 3 → 2 is smaller, so append 2.
+  - result = [1, 2]
+  - Increment i (now i = 1).
+
+- Third Iteration:
+
+  - Compare 5 and 3 → 3 is smaller, so append 3.
+  - result = [1, 2, 3]
+  - Increment j (now j = 2).
+
+- Fourth Iteration:
+
+  - Compare 5 and 7 → 5 is smaller, so append 5.
+  - result = [1, 2, 3, 5]
+  - Increment i (now i = 2).
+
+- Fifth Iteration:
+
+  - Compare 8 and 7 → 7 is smaller, so append 7.
+  - result = [1, 2, 3, 5, 7]
+  - Increment j (now j = 3).
+
+- Sixth Iteration:
+  - Compare 8 and 9 → 8 is smaller, so append 8.
+  - result = [1, 2, 3, 5, 7, 8]
+  - Increment i (now i = 3).
+- Append Remaining Elements:
+  - No elements left in left, but one element (9) left in right.
+  - Append 9 to result.
+  - result = [1, 2, 3, 5, 7, 8, 9]
